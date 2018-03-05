@@ -72,7 +72,10 @@
         display: block;
         margin-bottom: 40px;
         background-color: $c-gray-2;        
-        animation: colorchange 1s infinite;
+        
+        &.colorchange {
+            animation: colorchange 1s infinite;
+        }
         
         @media screen and ( max-width: $desktop + px ) {
             margin-bottom: get-vw-desktop(40);
