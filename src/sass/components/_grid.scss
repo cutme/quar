@@ -87,6 +87,15 @@
         @media screen and ( max-width: $desktop + px ) {
             padding-bottom: get-vw-desktop(190);
         }
+        
+        img.lazyload {
+            @extend %anim;
+            opacity: 0;
+        }
+        
+        img.lazyloaded {
+            opacity: 1;
+        }
 
         &.lazyloaded {
             picture {
