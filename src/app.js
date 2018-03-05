@@ -1,5 +1,5 @@
 import css from './sass/style.scss';
-import Barba from 'barba';
+import Barba from 'barba.js';
 import lazysizes from 'lazysizes';
 import { grid } from './js/Snippets.js';
 
