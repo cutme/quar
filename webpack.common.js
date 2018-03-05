@@ -29,8 +29,7 @@ module.exports = {
     resolve: {
         extensions: ['.js'],
         alias: {
-            'utils': path.resolve(__dirname, './src/js/Snippets'),
-            'barba': path.resolve('node_modules', 'barba.js/dist/barba.min')
+            'utils': path.resolve(__dirname, './src/js/Snippets')
         }
     },
     module: {
@@ -107,7 +106,7 @@ module.exports = {
 		    cache: false,
     		title: 'Quar',
     		chunks: ['app'],
-            template: './src/contacts.html'
+            template: './src/contacts.html',
 		}),
 
 		new HtmlWebpackPlugin({
@@ -115,7 +114,11 @@ module.exports = {
 		    cache: false,
     		title: 'Quar',
     		chunks: ['app'],
-            template: './src/index.html'
+            template: './src/index.html',
+            minify: {
+             collapseWhitespace: true,
+             preserveLineBreaks: true
+            }
 		}),
 		
 		new HtmlWebpackPlugin({

@@ -73,12 +73,10 @@ npm manifest:
           "siema": "^1.5.0",
           "validate.js": "^0.12.0"
       },
-      {
       "browserslist": [
           "> 1%",
-          "last 10 versions"
-          ]
-      }
+          "last 2 versions"
+      ]
   }
 
 yarn manifest: 
@@ -7727,10 +7725,17 @@ Lockfile:
       fd-slicer "~1.0.1"
 
 Trace: 
-  SyntaxError: /Volumes/Data/Projekty/www.quar.pl/package.json: Unexpected token { in JSON at position 2003
-      at JSON.parse (<anonymous>)
-      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:1036:59
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:98:30)
-      at /usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:109:13
-      at <anonymous>
+  Error: Command failed.
+  Exit code: 2
+  Command: sh
+  Arguments: -c npm run clean && NODE_ENV=production webpack --config webpack.prod.js
+  Directory: /Volumes/Data/Projekty/www.quar.pl
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:30281:17)
+      at emitTwo (events.js:125:13)
+      at ChildProcess.emit (events.js:213:7)
+      at maybeClose (internal/child_process.js:887:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:208:5)
