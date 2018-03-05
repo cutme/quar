@@ -1,0 +1,56 @@
+.c-social {
+    @extend %flex;
+    @extend %flex-x;
+    margin-bottom: 60px;
+    
+    @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+        margin-bottom: get-vw-desktop(60);
+    }
+    
+    li {
+        padding: 0 30px;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            padding: 0 get-vw-desktop(30);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            padding: 0 10px;
+        }  
+    }
+    
+    a {
+        @extend %anim;
+        display: block;
+
+        &:hover {
+            transform: translateY(-5px);
+            color: $c-red;
+        }
+    }
+    
+    .icon-facebook,
+    .icon-social,
+    .icon-instagram {
+        font-size: rem(32);
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(32);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(24);
+        }
+        
+    }
+    
+    .icon-be, .icon-twitter {
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(26);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(20);
+        }
+    }
+}

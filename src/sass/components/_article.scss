@@ -1,0 +1,29 @@
+.c-article {
+    line-height: 1.5;
+
+    p {
+        margin-bottom: 40px;
+        
+        font-size: rem(26);
+
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(26);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(18);
+        }
+    }
+    
+    h3 {
+        margin-bottom: 5px;
+        font: {
+            size: rem(40);
+            weight: $bold;
+        }
+    }
+    
+    ul li, ol li {
+        margin-bottom: 10px;
+    }    
+}

@@ -1,0 +1,58 @@
+.c-top {
+    @extend %anim;
+    //@extend %flex;
+    //@extend %flex-y;
+    //@extend %flex-spacebetween;
+    @include z-index(top);
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100px;
+   // padding-left: 40px;
+    opacity: 0;
+    
+    @media screen and ( max-width: $desktop + px ) {
+        height: get-vw-desktop(100);
+    }
+    
+    .pace-done & {
+		opacity: 1;
+	}
+    
+    &__bg {
+        @extend %abs;
+        z-index: -1;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: white;
+        opacity: 0;
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            display: none;
+        }
+    }
+    
+    @media screen and ( max-width: $tablet + px ) {
+        height: 60px;
+        background-color: white;
+    }
+    
+    &:after {
+        @extend %anim;
+        @extend %abs;
+        @extend %abs-after;
+        left: 0; top: 0; z-index: -1;
+        width: 100%; height: 100%;
+        background-color: white;
+        transform: translateY(-100%);
+    }
+    
+    &.is-opened {
+        height: 100%;
+        
+        &:after {
+            transform: translateY(0);
+        }
+       // background-color: white;
+    }
+}

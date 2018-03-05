@@ -1,0 +1,7 @@
+@include font-face-db( "verb", "verb_regular/VerbRegular-webfont", $regular);
+@include font-face-db( "verb", "verb_extrabold/VerbExtrabold-webfont", $extrabold);
+@include font-face-db( "verb", "verb_semibold/VerbSemibold-webfont", $semibold);
+@include font-face-db( "verb", "verb_black/VerbBlack-webfont", $black);
+@include font-face-db( "verb", "verb_bold/VerbBold-webfont", $bold);
+
+@include font-face-db( "icomoon", "icomoon/icomoon", normal);

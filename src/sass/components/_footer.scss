@@ -1,0 +1,92 @@
+.c-footer {
+    padding: 160px 0;
+    text-align: center;
+    transition-delay: 350ms;
+    
+    @media screen and ( max-width: 1460px ) {
+        padding: get-vw-desktop(160) 0;
+    }
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        padding: 60px 0;
+    }
+    
+    &__copyrights {
+        font-size: rem(22);
+        opacity: .5;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(22);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(18);
+        }
+    }
+    
+    &__header {
+        margin-bottom: 150px;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            margin-bottom: get-vw-desktop(150);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__lead {
+        margin-bottom: 40px;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        font: {
+            size: rem(38);
+            weight: $black;
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            margin-bottom: get-vw-desktop(40);
+            font-size: get-vw-desktop(38);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(28);
+        }
+    }
+    
+    &__mail {
+        font-size: rem(24);
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(24);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(18);
+        }
+        
+        a {
+            @extend %anim;
+            @extend %rel;
+            color: $c-red;
+            
+            &:after {
+                @extend %abs-after;
+                @extend %anim;
+                width: 0; height: 100%;
+                left: -5px; top: 0; z-index: -1;
+                background-color: $c-red;
+                
+            }
+            
+            &:hover {
+                color: white;
+                
+                &:after {
+                    width: calc(100% + 10px);    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.c-menu {
+    .is-opened & {
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        
+    
+        
+    
+    }
+}

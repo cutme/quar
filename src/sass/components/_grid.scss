@@ -1,0 +1,240 @@
+
+.c-grid {
+    &--static {
+        @extend %flex;
+
+        .c-grid__item {
+            &:first-of-type {
+                margin-right: 134px;
+            }
+        }
+    }
+
+    &--pagination {
+        .c-grid__item {
+            padding-bottom: 0;
+
+            &:first-child {
+                @media screen and ( min-width: $tablet_portrait + 1px ) {
+                    padding-top: 230px;
+                }
+            }
+            
+            @media screen and ( max-width: $smartphone_portrait + px ) {
+                width: 50%;
+                text-align: center;
+                
+                i {
+                    position: absolute;
+                    left: 50%; bottom: 10px;
+                    transform: translateX(-50%);
+                }
+                
+            }
+            
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+    }
+    
+    &--toppadding {
+        .c-grid__item {
+            &:first-child,
+            &:last-child {
+                padding-top: 200px;
+            }
+        }
+    }
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+
+    @media screen and ( min-width: $tablet_portrait + 1px ) {
+        &:not(.c-grid--pagination) {
+            .c-grid__item {
+                &:last-child,
+                &:nth-last-child(2) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    picture {
+        @extend %rel;
+        display: block;
+        margin-bottom: 40px;
+        background-color: $c-gray-2;        
+        animation: colorchange 1s infinite;
+        
+        @media screen and ( max-width: $desktop + px ) {
+            margin-bottom: get-vw-desktop(40);
+        }
+    }
+
+    &__item {
+        display: block;
+        max-width: 600px;
+        padding-bottom: 190px;
+        
+        @media screen and ( max-width: $desktop + px ) {
+            padding-bottom: get-vw-desktop(190);
+        }
+
+        &.lazyloaded {
+            picture {
+                animation: none;
+            }
+        }
+        
+        &--more {
+            &:hover {
+                color: $c-red;
+            }
+        }
+    }
+    
+    &__caption {
+        text-align: right;
+        
+        &--lead {
+            line-height: 1.25;
+            font: {
+                size: rem(40);
+                weight: $bold;
+            }
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+                font-size: get-vw-desktop(40);
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                font-size: rem(28);
+            }
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                font-size: rem(24);
+            }
+        }
+        
+        &--more {
+            font: {
+                size: rem(26);
+                weight: $semibold;
+            }
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+                font-size: get-vw-desktop(26);
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                font-size: rem(20);
+            }
+            
+            a {
+                &:hover {
+                    color: $c-red;
+                }
+            }
+        }
+    }
+
+    &__underlink {
+        border-top: 3px solid $c-black;
+        padding: {
+            top: 40px;
+            bottom: 40px;
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            padding: {
+                top: get-vw-desktop(40);
+                bottom: get-vw-desktop(40);
+            }
+        }
+        
+        i {
+            vertical-align: middle;
+            font-weight: $regular;
+            color: $c-red;
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+                font-size: get-vw-desktop(26);
+            }
+        }
+        
+        span {
+            display: inline-block;
+            font-weight: $bold;
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+                font-size: get-vw-desktop(26);
+            }
+        }
+        
+        &--left,
+        &--right {
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                font-size: rem(18);               
+            }
+            
+            span {
+                
+            }
+        }
+        
+        &--left {
+            span {
+                padding-left: 25px;
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    padding-left: 15px;
+                }
+                
+                @media screen and ( max-width: $smartphone_portrait + px ) {
+                    padding: 0;
+                }
+            }            
+        }
+        
+        &--right {
+            @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                text-align: right;
+            }
+            
+            i {
+                &:before {
+                    display: inline-block;
+                    transform: scaleX(-1);
+                }
+            }
+            
+            span {
+                padding-right: 25px;
+                
+                @media screen and ( max-width: $tablet_portrait + px ) {
+                    padding-right: 15px;
+                }
+                
+                @media screen and ( max-width: $smartphone_portrait + px ) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    
+    img {
+        &.lazyload,
+        &.lazyloading {
+            opacity: 0;
+        }
+    }
+}
+

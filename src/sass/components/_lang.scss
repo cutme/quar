@@ -1,0 +1,9 @@
+.c-lang {
+    li {
+        &:last-child {
+            @media screen and ( min-width: $tablet_portrait + 1px ) {
+                padding-right: 0;
+            }
+        }
+    }
+}

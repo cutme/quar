@@ -1,0 +1,11 @@
+.o-section {
+    padding-top: 230px;
+    
+    @media screen and ( max-width: $tablet_portrait + px ) {
+        padding-top: 140px;
+    }
+    
+    &--bothpadding {
+        padding-bottom: 190px;
+    }
+}

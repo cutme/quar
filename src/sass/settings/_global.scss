@@ -1,0 +1,39 @@
+// Fonts
+
+$icons:		'icomoon';
+$sans:      'verb', sans-serif;
+
+$text:		$sans;
+
+
+// Font weights
+
+
+$regular:			400;
+$semibold:          600;
+$bold:              700;
+$extrabold:         800;
+$black:             900;
+
+
+
+$z-index: (
+	top           : 100,
+	nav           : 110
+);
+
+
+// Default
+
+$base-font-size:	26;
+$base:				1334;
+
+
+
+// RWD
+
+$desktop:               1460;
+$tablet:				1024;
+$tablet_portrait:		768;
+$smartphone:			640;
+$smartphone_portrait:	480;

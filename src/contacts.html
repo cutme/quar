@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+    
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+	<meta name="GOOGLEBOT" content="NOODP"> 
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+    <%= require('html-loader!./includes/head.html') %>
+</head>
+
+<body style="overflow: hidden" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<div id="barba-wrapper">
+    <div class="barba-container" data-namespace="contact">
+
+    <%= require('html-loader?-attrs!./includes/cover.html') %>
+
+    <div class="c-top js-top">
+        <a href="index.html" class="c-logo">
+            <img src=<%= require("./img/quar.svg") %> width="50" height="50" alt="Quar">
+        </a>
+        
+        <nav class="c-nav" id="nav">
+            <ul class="c-menu">
+                <li>
+                    <a href="index.html" data-rain-effect="home">
+                        <span>home</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="work.html" data-rain-effect="work">
+                        <span>work</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="services.html" data-rain-effect="services">
+                        <span>services</span>
+                    </a>
+                </li>
+                
+                <li class="current-menu-item">
+                    <a href="contacts.html" data-rain-effect="contacts">
+                        <span>contacts</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="c-lang">
+                <li class="current-menu-item">
+                    <a href="#" data-rain-effect="pl">
+                        <span>pl</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" data-rain-effect="en">
+                        <span>en</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="c-hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="c-top__bg js-bgFadeIn"></div>
+    </div>
+
+
+	<div itemprop="mainContentOfPage" role="main" class="o-container">
+
+		<div class="o-wrap">
+		    <div class="o-section">
+    		    <div class="o-header">
+    		        <h1 class="o-header__primary o-header__primary--big">
+                        Hallo! Let's play<i class="icon-dot anim anim--up"></i>
+    		        </h1>
+    		    </div>
+
+                <div class="c-contact">
+                    <h3 class="c-contact__tel">+48 602 44 99 95</h3>
+                    <p class="c-footer__mail">
+                        <a href="mailto:hallo@quar.studio">hallo@quar.studio</a>
+                    </p>
+                    
+                    <p class="c-contact__line">Or drop us a line</p>
+                
+                    <div class="c-contactform js-contactform">
+                        <div class="col anim anim--topline">
+                            <label><span>*</span> Name:</label>
+                            <input type="text" class="js-field">
+                        </div>
+                        
+                        <div class="col anim anim--topline">
+                            <label>Company:</label>
+                            <input type="text" class="js-field">
+                        </div>
+                        
+                        <div class="col anim anim--topline">
+                            <label><span>*</span> Email:</label>
+                            <input type="text" class="js-field">
+                        </div>
+                        
+                        <div class="col anim anim--topline">
+                            <label>Phone:</label>
+                            <input type="text" class="js-field">
+                        </div>
+                        
+                        <div class="row anim anim--topline anim--bottomline">
+                            <label><span>*</span> Message:</label>
+                            <textarea class="js-field"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit">send</button>
+                    </div>
+                
+
+                    <div class="c-grid c-grid--pagination c-grid--toppadding js-grid">
+                        <div class="c-grid__item anim anim--left">
+                            <a href="work.html" class="c-grid__item--more">
+                                <div class="c-grid__underlink c-grid__underlink--left">
+                                    <i class="icon-arrow"></i> <span>Explore Case Studies</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>		    
+
+            <footer class="c-footer anim anim--up">
+                <header class="c-footer__header">
+    		        <h2 class="c-footer__lead">Find us on</h2>
+                </header>
+		        
+		        <ul class="c-social">
+		            <li>
+		                <a href="#" class="icon-facebook"></a>
+		            </li>
+		            
+		            <li>
+		                <a href="#" class="icon-social"></a>
+		            </li>
+		            
+		            <li>
+		                <a href="#" class="icon-be"></a>
+		            </li>
+		            
+		            <li>
+		                <a href="#" class="icon-instagram"></a>
+		            </li>
+		            
+		            <li>
+		                <a href="#" class="icon-twitter"></a>
+		            </li>
+		        </ul>
+		        
+		        <div class="c-footer__copyrights">Quar.Studio &copy; 2018</div>
+		    </footer>
+
+		</div>
+	</div><!-- /container -->
+
+</div>
+</div>
+
+</body>
+</html>

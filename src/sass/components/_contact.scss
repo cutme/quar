@@ -1,0 +1,72 @@
+.c-contact {
+    &__tel {
+        margin-bottom: 50px;
+        font: {
+            size: rem(48);
+            weight: $extrabold;
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            margin-bottom: get-vw-desktop(50);
+            font-size: get-vw-desktop(48);
+        }
+        
+        @media screen and ( max-width: $tablet + px ) {
+            margin-bottom: get-vw-tablet(50);
+            font-size: get-vw-tablet(48);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(24);
+        }
+    }
+    
+    .c-footer__mail {
+        margin-bottom: 130px;
+        font-size: rem(26);
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            margin-bottom: get-vw-desktop(130);
+            font-size: get-vw-desktop(26);
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1024px ) {
+            font-size: get-vw-tablet(26);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 60px;
+            font-size: rem(18);
+        }
+    }
+    
+    .c-grid--pagination  {
+        .c-grid__item {
+            width: 100%;
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding-top: 100px !important;
+            }
+        }
+    }
+    
+    &__line {
+        margin-bottom: 100px;
+        font-size: rem(40);
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            margin-bottom: get-vw-desktop(100);
+            font-size: get-vw-desktop(40);
+        }
+        
+        @media screen and (  max-width: 1024px ) {
+            margin-bottom: get-vw-tablet(100);
+            font-size: get-vw-tablet(40);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 50px;
+            font-size: rem(20);
+        }
+    }
+}

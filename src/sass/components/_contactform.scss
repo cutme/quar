@@ -1,0 +1,186 @@
+.c-contactform {
+    @extend %rel;
+    @extend %flex;
+    @extend %flex-wrap;
+    @extend %flex-spacebetween;
+    
+    label {
+        @extend %abs;
+        @extend %anim--medium;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        cursor: text;
+        letter-spacing: 1px;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(26);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(18);
+        }
+        
+        span {
+            display: inline-block;
+            margin-right: 8px;
+            color: $c-red;
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                margin-right: 4px;
+            }
+        }
+    }
+    
+    input {
+        height: 100px;
+        font-size: rem(24);
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            height: get-vw-desktop(100);
+            font-size: get-vw-desktop(24);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            height: 60px;
+        }
+    }
+    
+    textarea {
+        height: 280px;
+        padding-right: 250px;
+        padding-top: 40px;
+        font-size: rem(18);
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            height: get-vw-desktop(280);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            height: 180px;
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            height: 100px;
+            padding-top: 20px;
+        }
+    }
+    
+    .col {
+        @extend %rel;
+        width: 600px;
+        height: 100px;
+        //border-top: 1px solid black;
+        margin-bottom: 10px;
+        overflow: hidden;
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            height: get-vw-desktop(100);
+        }
+        
+        @media screen and ( max-width: $desktop + px ) {
+            width: grid(600, 1460);
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            height: 60px;
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            width: 100%;
+        }
+        
+        &:before {
+            @extend %abs-after;
+            left: 0; top: 0;
+            height: 1px;
+            background-color: black;
+        }
+        
+        label {
+            @extend %flex;
+            @extend %flex-y;
+        }
+    }
+    
+    .row {
+        @extend %rel;
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+        
+        &:after {
+            @extend %abs-after;
+            left: 0; top: 0;
+            height: 1px; width: 100%;
+            background-color: black;
+        }
+        
+        &:before {
+            @extend %abs-after;
+            left: 0; bottom: 0;
+            height: 1px;
+            background-color: black;
+        }
+        
+        label {
+            padding-top: 40px;
+            font-size: rem(18);
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+                font-size: get-vw-desktop(18);
+            }
+            
+            @media screen and ( max-width: $tablet_portrait + px ) {
+                padding-top: 20px;
+            }
+        }
+    }
+    
+    .is-active {
+        opacity: 0;
+        left: -100px;
+    }
+    
+    .submit {
+        @extend %abs;
+        @extend %anim;
+        right: 0; bottom: 0;
+        height: 80px;
+        background-color: $c-gray;
+        text-transform: uppercase;
+        padding: 0 90px;
+        font: {
+            size: rem(28);
+            weight: $bold;
+        }
+        
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(28);
+        }
+        
+        &:after {
+            @extend %abs-after;
+            right: 0; top: 50%;
+            transform: translateY(-50%) scaleX(-1);
+            font: {
+                family: $icons;
+                size: rem(24);
+                weight: $regular;
+            }
+            content: "\e900";
+            color: $c-red;
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+                font-size: get-vw-desktop(24);
+            }
+        }
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(18);
+        }
+        
+        &:hover {
+            color: $c-red;
+        }
+    }
+}
