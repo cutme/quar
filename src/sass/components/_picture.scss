@@ -3,12 +3,15 @@
     animation: colorchange 1s infinite;
     
     img {
-        opacity: 0;
+        //opacity: 0;
+
         
-        &.lazyloaded { 
-            @extend %anim;
-        	opacity: 1;
+      /*
+  &.lazyloaded { 
+            @extend %anim--normal;
         }
+*/
+
     }
 
     &--top {

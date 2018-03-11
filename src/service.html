@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+    
+    <title><%= htmlWebpackPlugin.options.title %></title>
+	
+	<meta name="GOOGLEBOT" content="NOODP"> 
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+    <%= require('html-loader!./includes/head.html') %>
+</head>
+
+<body itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<div id="barba-wrapper">
+    <div class="barba-container" data-namespace="homepage">
+
+    <%= require('html-loader?-attrs!./includes/cover.html') %>
+
+    <div class="c-top js-top">
+        <a href="index.html" class="c-logo">
+            <img src=<%= require("./img/quar.svg") %> width="50" height="50" alt="Quar">
+        </a>
+        
+        <nav class="c-nav">
+            <ul class="c-menu">
+                <li>
+                    <a href="index.html" data-rain-effect="home">
+                        <span>home</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="work.html" data-rain-effect="work">
+                        <span>work</span>
+                    </a>
+                </li>
+                
+                <li class="current-menu-item">
+                    <a href="services.html" data-rain-effect="services">
+                        <span>services</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="contacts.html" data-rain-effect="contacts">
+                        <span>contacts</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="c-lang">
+                <li class="current-menu-item">
+                    <a href="#" data-rain-effect="pl">
+                        <span>pl</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" data-rain-effect="en">
+                        <span>en</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="c-top__bg js-bgFadeIn js-white"></div>
+    </div>
+
+
+	<div itemprop="mainContentOfPage" role="main" class="o-container no-padding">
+
+
+
+	    <div class="c-picture c-picture--top  js-fullHeight">
+            <picture class="lazyload">
+				<source data-srcset="https://source.unsplash.com/89PFnHKg8HE/2560x1440" media="(min-width: 1680px)">
+				<source data-srcset="https://source.unsplash.com/89PFnHKg8HE/1680x1050" media="(min-width: 1440px)">
+				<source data-srcset="https://source.unsplash.com/89PFnHKg8HE/1440x900" media="(min-width: 1024px)">
+				
+				<img 
+				    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+				    data-srcset="https://source.unsplash.com/89PFnHKg8HE/1024x768" 
+				    class="lazyload" 
+				    alt="">
+			</picture>
+        </div>
+
+
+		<div class="o-wrap index-up">
+            <div class="o-section">
+    		    <div class="o-header">
+    		        <h1 class="o-header__primary">
+                        UI/UX Design<br> 
+                        2D/3D Animation <i class="icon-dot"></i>
+    		        </h1>
+    		    </div>
+            
+                <article class="c-article u-dash">
+                    <p>More information and more information and<br> more information and more ...</p>
+                </article>
+            </div>
+		</div>
+
+
+        
+        <div class="o-wrap">
+		    <div class="o-section o-section--articles">
+    		    <div class="o-header anim anim--up">
+    		        <h2 class="o-header__secondary">
+                        Description line 1 <i class="icon-dot"></i>
+    		        </h2>
+    		    </div>
+                
+                <article class="c-article u-dash anim anim--up">
+                    <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium et nulla eget laoreet. Phasellus pellentesque nisl ligula, pellentesque gravida augue laoreet non. Ut feugiat, massa quis faucibus luctus, lorem est auctor dui, nec scelerisque mauris orci et massa. Mauris auctor nisl sed mi posuere interdum.
+                    </p>
+                </article> 
+                
+                
+                <div class="o-header anim anim--up">
+    		        <h2 class="o-header__secondary">
+                        Description line 2 <i class="icon-dot"></i>
+    		        </h2>
+    		    </div>
+                
+                <article class="c-article u-dash anim anim--up">
+                    <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium et nulla eget laoreet. Phasellus pellentesque nisl ligula, pellentesque gravida augue laoreet non. Ut feugiat, massa quis faucibus luctus, lorem est auctor dui, nec scelerisque mauris orci et massa. Mauris auctor nisl sed mi posuere interdum.
+                    </p>
+                </article>    
+                
+                
+                <div class="o-header anim anim--up">
+    		        <h2 class="o-header__secondary">
+                        Description line 3 <i class="icon-dot"></i>
+    		        </h2>
+    		    </div>
+                
+                <article class="c-article u-dash anim anim--up">
+                    <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium et nulla eget laoreet. Phasellus pellentesque nisl ligula, pellentesque gravida augue laoreet non. Ut feugiat, massa quis faucibus luctus, lorem est auctor dui, nec scelerisque mauris orci et massa. Mauris auctor nisl sed mi posuere interdum.
+                    </p>
+                </article> 
+                
+                
+                <div class="o-header anim anim--up">
+    		        <h2 class="o-header__secondary">
+                        Description line 4 <i class="icon-dot"></i>
+    		        </h2>
+    		    </div>
+                
+                <article class="c-article u-dash anim anim--up">
+                    <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium et nulla eget laoreet. Phasellus pellentesque nisl ligula, pellentesque gravida augue laoreet non. Ut feugiat, massa quis faucibus luctus, lorem est auctor dui, nec scelerisque mauris orci et massa. Mauris auctor nisl sed mi posuere interdum.
+                    </p>
+                </article>        
+            </div>
+		    
+		    
+		    <div class="c-grid c-grid--pagination js-grid">
+                <div class="c-grid__item anim anim--normal anim--left">
+                    <a href="services.html" class="c-grid__item--more">
+                        <div class="c-grid__underlink c-grid__underlink--left">
+                            <i class="icon-arrow"></i> <span>Services</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="c-grid__item anim anim--normal anim--right">
+                    <a href="work.html" class="c-grid__item--more">
+                        <div class="c-grid__underlink c-grid__underlink--right">
+                            <span>Explore Case Studies</span> <i class="icon-arrow"></i>
+                        </div>
+                    </a> 
+                </div>
+            </div>
+		</div>
+        
+        
+        
+        
+
+
+		<%= require('html-loader!./includes/footer.html') %>
+
+	</div><!-- /container -->
+
+
+    </div>
+</div>
+
+</body>
+</html>

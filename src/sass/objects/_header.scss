@@ -1,11 +1,7 @@
 .o-header {
-    margin-bottom: 90px;
-    
-    @media screen and ( max-width: $smartphone_portrait + px ) {
-        margin-bottom: 40px;
-    }
 
     &__primary {
+        margin-bottom: 90px;
         letter-spacing: 3px;
         line-height: 1.1;
         font: {
@@ -19,6 +15,29 @@
         
         @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
             font-size: get-vw-desktop(72);
+        }     
+        
+        @media screen and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(48);
+        }
+        
+        @media screen and ( max-width: $smartphone + px ) {
+            margin-bottom: 40px;
+            font-size: rem(32);
+        }
+    }
+    
+    &__secondary {
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        line-height: 1.1;
+        font: {
+            size: rem(52);
+            weight: $extrabold;
+        }
+
+        @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+            font-size: get-vw-desktop(52);
         }     
         
         @media screen and ( max-width: $tablet_portrait + px ) {

@@ -143,7 +143,7 @@
     
     .submit {
         @extend %abs;
-        @extend %anim;
+        @extend %anim--normal;
         right: 0; bottom: 0;
         height: 80px;
         background-color: $c-gray;

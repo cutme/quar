@@ -1,11 +1,17 @@
-
 .c-grid {
+    @extend %rel;
+
     &--static {
-        @extend %flex;
+
+        @media screen and ( min-width: $tablet_portrait + 1px ) {
+            display: flex;
+        }
 
         .c-grid__item {
             &:first-of-type {
-                margin-right: 134px;
+                @media screen and ( min-width: $tablet_portrait + 1px ) {
+                    margin-right: 134px;
+                }
             }
         }
     }
@@ -54,7 +60,6 @@
         max-width: 600px;
         margin: 0 auto;
     }
-    
 
     @media screen and ( min-width: $tablet_portrait + 1px ) {
         &:not(.c-grid--pagination) {
@@ -66,23 +71,16 @@
             }
         }
     }
-
+    
     picture {
         @extend %rel;
-        display: block;
+       display: block;
         margin-bottom: 40px;
-        background-color: $c-gray-2;        
-        
-        &.colorchange {
-            animation: colorchange 1s infinite;
-        }
-        
-        @media screen and ( max-width: $desktop + px ) {
-            margin-bottom: get-vw-desktop(40);
-        }
+       background-color: $c-gray-2;   
     }
 
     &__item {
+        -webkit-tap-highlight-color: rgba(#000,0);
         display: block;
         max-width: 600px;
         padding-bottom: 190px;
@@ -92,7 +90,7 @@
         }
         
         img.lazyload {
-            @extend %anim;
+            @extend %anim--normal;
             opacity: 0;
         }
         

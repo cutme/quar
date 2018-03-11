@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js prod
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js dev
 
 PATH: 
   /opt/local/bin:/opt/local/sbin:/Users/admin/.rvm/gems/ruby-2.2.0/bin:/Users/admin/.rvm/gems/ruby-2.2.0@global/bin:/Users/admin/.rvm/rubies/ruby-2.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/admin/.rvm/bin
@@ -7726,9 +7726,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: sh
-  Arguments: -c npm run clean && NODE_ENV=production webpack --config webpack.prod.js
+  Arguments: -c webpack-dev-server --host 0.0.0.0 --config webpack.dev.js
   Directory: /Volumes/Data/Projekty/www.quar.pl
   Output:
   

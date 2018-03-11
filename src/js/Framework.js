@@ -1,3 +1,23 @@
+// Full Height
+
+(function() {
+	var fullHeight = document.getElementsByClassName('js-fullHeight'),
+	    action = function() {
+    		var windowHeight = window.innerHeight + 'px';
+    
+    		if (fullHeight) {
+    			for (var i = 0; i < fullHeight.length; i++) {
+    				fullHeight[i].style.height = windowHeight;
+    			}
+    		}
+    	};
+	
+	action();
+	
+	window.addEventListener( 'resize', action );
+
+}).call(this);
+
 // isMobile
 
 (function() {
@@ -8,3 +28,104 @@
 	}
 }).call(this);
 
+// Nav
+
+(function() {
+	
+    const action = function(e) {
+    
+        const nav = document.getElementById('nav'),
+    	      top = document.getElementsByClassName('c-top')[0];
+
+            top.classList.toggle('is-opened');
+            
+            setTimeout(function() {
+                nav.classList.toggle('is-visible');
+            }, 1);
+            
+    		e.target.classList.toggle('open');
+            e.returnValue = false;
+          };
+	
+    document.addEventListener('click', function(e) {   
+    	if (e.target.classList.contains('js-hamburger')) {
+            action(e);
+    	}
+	});
+}).call(this);
+
+// Show on scroll
+
+(function() {
+    const el = document.getElementsByClassName('anim');
+    
+    const isInView = function(el) {
+		let bottomOfWindow = (window.pageYOffset || window.scrollY) + window.innerHeight  ;
+		
+		if ( el.getBoundingClientRect().top + (window.pageYOffset || window.scrollY) < bottomOfWindow ) {
+			return true;
+		}
+	};
+	
+	let lastScrollTop = 0;
+	
+	for (let i = 0; i < el.length; i++) {
+	    
+		if (isInView(el[i])) {
+			el[i].className += ' anim--loaded';
+		}
+	}
+   
+	function init() {
+	    // Check direction of scroll
+	    let st = window.pageYOffset || document.documentElement.scrollTop, d;
+        if (st > lastScrollTop) {
+            d = 'down';
+        } else {
+            d = 'up';
+        }
+        lastScrollTop = st;
+        // Show or remove from viewport
+        for (let j = 0; j < el.length; j++) {
+            let margin = -100;
+
+            if (el[j].classList.contains('anim--up')) {
+                margin = 300;
+            }
+
+            let bottomOfObject = el[j].getBoundingClientRect().top + st,
+                bottomOfWindow = st + window.innerHeight;
+            if ( (d === 'down') && (bottomOfWindow + margin > bottomOfObject) ) {
+                el[j].classList.add('anim--loaded');
+            } else if( (bottomOfWindow - margin < bottomOfObject) && (el[j].classList.contains('anim--out')) ) {
+                el[j].classList.remove('anim--loaded');
+			}
+		}
+	}
+	window.addEventListener('scroll', init);
+	
+}).call(this);
+
+
+// Topbar
+
+(function() {
+
+    const el = document.getElementsByClassName('js-bgFadeIn')[0];
+
+    let winPos = (window.pageYOffset || window.scrollY);
+
+    if (el.classList.contains('js-white')) {
+        el.style.opacity = 1;
+    } else {
+        
+        function action() {
+            winPos = (window.pageYOffset || window.scrollY);
+            el.style.opacity = (winPos / 2) * 0.01;
+        }
+
+    	window.addEventListener('scroll', action);
+    	action();
+    }
+
+}).call(this);

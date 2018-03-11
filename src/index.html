@@ -15,8 +15,6 @@
 </head>
 
 <body style="overflow: hidden" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-<div id="barba-wrapper">
-    <div class="barba-container" data-namespace="homepage">
   
     <%= require('html-loader?-attrs!./includes/cover.html') %>
 
@@ -81,6 +79,8 @@
 
 
 	<div itemprop="mainContentOfPage" role="main" class="o-container">
+	
+	
 
 		<div class="o-wrap">
 		    <div class="o-section">
@@ -93,17 +93,17 @@
     		    </div>
 
                 <div class="c-grid js-grid">
-                    <a href="#" class="c-grid__item">
+                    <div class="c-grid__item">
                         <article class="c-article u-dash">
                             <p>More information and more information and more information and more ...</p>
                         </article>
-                    </a> 
+                    </div> 
                     
                     <%= require('html-loader?-attrs!./includes/grid_items.html') %>
                 </div>
 
                 <div class="c-grid c-grid--pagination c-grid--pagination--steps js-grid">
-                    <div class="c-grid__item anim anim--left">
+                    <div class="c-grid__item anim anim--normal anim--left">
                         <a href="services.html" class="c-grid__item--more">
                             <div class="c-grid__underlink c-grid__underlink--left">
                                 <i class="icon-arrow"></i> <span>Services</span>
@@ -111,7 +111,7 @@
                         </a>
                     </div>
                     
-                    <div class="c-grid__item anim anim--right">
+                    <div class="c-grid__item anim anim--normal anim--right">
                         <a href="work.html" class="c-grid__item--more">
                             <div class="c-grid__underlink c-grid__underlink--right">
                                 <span>Explore Case Studies</span> <i class="icon-arrow"></i>
@@ -121,13 +121,13 @@
                 </div>
             </div>
 
+
             <%= require('html-loader!./includes/footer.html') %>
+			
 
 		</div>		
 	</div><!-- /container -->
 
-    </div>
-</div>
 
 </body>
 </html>

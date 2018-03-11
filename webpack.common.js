@@ -20,17 +20,19 @@ const cssProd = ExtractTextPlugin.extract({
 
 module.exports = {
     entry: {
-        app: "./src/app.js"
+        contacts: "./src/index.js",
+        index: "./src/index.js",
+        project: "./src/project.js",
+        service: "./src/service.js",
+        services: "./src/services.js",
+        work: "./src/work.js"
     },
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: "[name].bundle.js",
     },
     resolve: {
-        extensions: ['.js'],
-        alias: {
-            'utils': path.resolve(__dirname, './src/js/Snippets')
-        }
+        extensions: ['.js']
     },
     module: {
     	rules: [
@@ -105,7 +107,7 @@ module.exports = {
 		    filename: 'contacts.html',
 		    cache: false,
     		title: 'Quar',
-    		chunks: ['app'],
+    		chunks: ['contacts'],
             template: './src/contacts.html',
 		}),
 
@@ -113,7 +115,7 @@ module.exports = {
 		    filename: 'index.html',
 		    cache: false,
     		title: 'Quar',
-    		chunks: ['app'],
+    		chunks: ['index'],
             template: './src/index.html',
             minify: {
              collapseWhitespace: true,
@@ -125,15 +127,23 @@ module.exports = {
 		    filename: 'project.html',
 		    cache: false,
     		title: 'Quar',
-    		chunks: ['app'],
+    		chunks: ['project'],
             template: './src/project.html'
+		}),
+		
+		new HtmlWebpackPlugin({
+		    filename: 'service.html',
+		    cache: false,
+    		title: 'Quar',
+    		chunks: ['service'],
+            template: './src/service.html'
 		}),
 		
 		new HtmlWebpackPlugin({
 		    filename: 'services.html',
 		    cache: false,
     		title: 'Quar',
-    		chunks: ['app'],
+    		chunks: ['services'],
             template: './src/services.html'
 		}),
 		
@@ -141,7 +151,7 @@ module.exports = {
 		    filename: 'work.html',
 		    cache: false,
     		title: 'Quar',
-    		chunks: ['app'],
+    		chunks: ['work'],
             template: './src/work.html'
 		}),
 

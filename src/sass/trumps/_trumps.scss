@@ -3,7 +3,6 @@
 }
 
 .anim {
-	@extend %anim--medium;
 	will-change: transform, opacity;
 	
 	&--bottomline {
@@ -20,48 +19,12 @@
         	}
     	}
 	}
-	
-	&--topline {
-	    transition-delay: 500ms;
 
-	    &:before {
-	        @extend %anim--medium;
-        	width: 0;
-    	}
-    	
-    	&.anim--loaded {
-            &:before {
-            	width: 100%;
-        	}
-    	}
-	}
-	
-	&--up {
+	&--fadein {
 		opacity: 0;
-		transform: translateY(60px);
 		
 		&.anim--loaded {
 			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-	
-	&--upBefore {
-	    &:before { 
-	        
-	        display: inline-block;
-    		opacity: 0;
-    		transform: translateY(-50px);
-		}
-		
-		&.anim--loaded {
-		    &:before {
-		        @extend %anim--medium;
-		        transition-property: opacity;
-		        transition-delay: 2000ms;
-    			opacity: 1;
-    			transform: translateY(0);
-            }
 		}
 	}
 	
@@ -75,13 +38,9 @@
 		}
 	}
 	
-	&--fadein {
-		opacity: 0;
-		
-		&.anim--loaded {
-			opacity: 1;
-		}
-	}
+	&--normal {
+        @extend %anim--normal;
+    }
 	
 	&--right {
 		opacity: 0;
@@ -92,17 +51,6 @@
 			transform: translateX(0);
 		}
 	}
-	
-	&--scalein {
-		transform: scale(0);
-		opacity: 0;
-		
-		&.anim--loaded {
-		    opacity: 1;
-			transform: scale(1);
-		}
-	}
-	
 	
     &--delay1 {
 	    transition-delay: 100ms !important;
@@ -131,6 +79,68 @@
 	&--delay7 {
 	    transition-delay: 700ms !important;
 	}
+	
+	&--scalein {
+		transform: scale(0);
+		opacity: 0;
+		
+		&.anim--loaded {
+		    opacity: 1;
+			transform: scale(1);
+		}
+	}
+	
+	&--topline {
+	    transition-delay: 500ms;
+
+	    &:before {
+	        @extend %anim--medium;
+        	width: 0;
+    	}
+    	
+    	&.anim--loaded {
+            &:before {
+            	width: 100%;
+        	}
+    	}
+	}
+	
+	&--up {
+		opacity: 0;
+		transform: matrix(1, 0, 0, 1, 0, 400);
+        transition-duration: 800ms;
+		//transform: translateY(60px);
+		
+		&.anim--loaded {
+			opacity: 1;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+			//transform: translateY(0);
+		}
+	}
+	
+	&--upBefore {
+	    &:before { 
+	        
+	        display: inline-block;
+    		opacity: 0;
+    		transform: translateY(-50px);
+		}
+		
+		&.anim--loaded {
+		    &:before {
+		        @extend %anim--medium;
+		        transition-property: opacity;
+		        transition-delay: 2000ms;
+    			opacity: 1;
+    			transform: translateY(0);
+            }
+		}
+	}
+}
+
+.index-up {
+    margin-top: -100vh;
+    z-index: 20;
 }
 
 .no-padding {
@@ -155,3 +165,4 @@
 .u-marginbottom {
    // margin-bottom: 100px;
 }
+

@@ -15,6 +15,11 @@
 	@return ($target / $vw-context) * 1vw;
 }
 
+@function get-vw-1166($target) {
+	$vw-context: (1166 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
 @function get-vw-tablet($target) {
 	$vw-context: ($tablet * 0.01);
 	@return ($target / $vw-context) * 1vw;
@@ -24,7 +29,10 @@
 	$vw-context: ($tablet_portrait * 0.01);
 	@return ($target / $vw-context) * 1vw;
 }
-
+@function get-vw-smartphone($target) {
+	$vw-context: ($smartphone * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
 
 
 @function z-index($key) {
