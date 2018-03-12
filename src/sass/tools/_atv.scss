@@ -16,8 +16,8 @@
     }
 	
 	@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: $desktop + px ) {
-//	    height: 627px;
 	    height: get-vw-desktop(627);
+	   // height: 500px;
 	}
 	
 	@media screen and ( max-width: $tablet_portrait + px ) {

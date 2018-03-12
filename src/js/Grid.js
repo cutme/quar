@@ -47,7 +47,7 @@ export function grid() {
     
         ww = window.innerWidth;
         
-        if (ww <= 768 && mobile === false) {
+        if ((ww <= 768) && (mobile === false)) {
             for (let i = 0; i < grid.length; i ++) {
                 if (macyInstance[i] != undefined) {
                     macyInstance[i].remove();
@@ -57,7 +57,7 @@ export function grid() {
             mobile = true;
         }
         
-        if (ww > 768 && mobile === true) {
+        if ((ww > 768) && (mobile === true)) {
                         console.log('init');
             init();
             
