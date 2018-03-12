@@ -109,6 +109,7 @@ module.exports = {
     		title: 'Quar',
     		chunks: ['contacts'],
             template: './src/contacts.html',
+            favicon: './src/favicon.ico'
 		}),
 
 		new HtmlWebpackPlugin({
@@ -120,7 +121,8 @@ module.exports = {
             minify: {
              collapseWhitespace: true,
              preserveLineBreaks: true
-            }
+            },
+            favicon: './src/favicon.ico'
 		}),
 		
 		new HtmlWebpackPlugin({
@@ -128,7 +130,8 @@ module.exports = {
 		    cache: false,
     		title: 'Quar',
     		chunks: ['project'],
-            template: './src/project.html'
+            template: './src/project.html',
+            favicon: './src/favicon.ico'
 		}),
 		
 		new HtmlWebpackPlugin({
@@ -136,7 +139,8 @@ module.exports = {
 		    cache: false,
     		title: 'Quar',
     		chunks: ['service'],
-            template: './src/service.html'
+            template: './src/service.html',
+            favicon: './src/favicon.ico'
 		}),
 		
 		new HtmlWebpackPlugin({
@@ -144,7 +148,8 @@ module.exports = {
 		    cache: false,
     		title: 'Quar',
     		chunks: ['services'],
-            template: './src/services.html'
+            template: './src/services.html',
+            favicon: './src/favicon.ico'
 		}),
 		
 		new HtmlWebpackPlugin({
@@ -152,7 +157,8 @@ module.exports = {
 		    cache: false,
     		title: 'Quar',
     		chunks: ['work'],
-            template: './src/work.html'
+            template: './src/work.html',
+            favicon: './src/favicon.ico'
 		}),
 
 	]
