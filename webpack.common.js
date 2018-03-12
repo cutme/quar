@@ -59,6 +59,10 @@ module.exports = {
                                 enabled: false,
                                 progressive: false,
                                 quality: 70
+                            },
+                            svgo: {
+                                enabled: true,
+                                removeComments: true
                             }
                         }
                     }

@@ -81,7 +81,7 @@
     <div class="barba-container" data-namespace="homepage">
 
     
-<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: #f4f4f4; background-image: url('img/quarstudio.svg'); background-repeat: no-repeat; background-position: center; background-size: 138px" id="cover"></div>
+<div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: #f4f4f4; background-image: url('./src/img/quarstudio.svg'); background-repeat: no-repeat; background-position: center; background-size: 138px" id="cover"></div>
 
 
     <div class="c-top js-top">
@@ -89,7 +89,7 @@
             <img src=img/quar.svg width="50" height="50" alt="Quar">
         </a>
         
-        <nav class="c-nav">
+        <nav class="c-nav" id="nav">
             <ul class="c-menu">
                 <li>
                     <a href="index.html" data-rain-effect="home">
@@ -131,6 +131,13 @@
             </ul>
         </nav>
         
+        <div class="c-hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
         <div class="c-top__bg js-bgFadeIn js-white"></div>
     </div>
 
@@ -157,7 +164,7 @@
     		    <div class="o-header">
     		        <h1 class="o-header__primary">
                         Project<br> 
-                        title line <i class="icon-dot anim anim--upBefore"></i>
+                        title line
     		        </h1>
     		    </div>
 
@@ -226,7 +233,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium et nul
     		    <div class="o-header">
     		        <h1 class="o-header__primary">
                         Project<br> 
-                        title line 2<i class="icon-dot anim anim--upBefore"></i>
+                        title line 2
     		        </h1>
     		    </div>
 
@@ -264,7 +271,7 @@ Phasellus id lorem convallis, tempor tellus consectetur, sodales libero. Interdu
                 <div class="c-grid__item c-grid__item--nopadding anim anim--left">
                     <a href="project.html" class="c-grid__item--more">
                         <div class="c-grid__underlink c-grid__underlink--left">
-                            <i class="icon-arrow"></i> <span>Next project</span>
+                            <i class="icon-arrow"></i> <span>Previous project</span>
                         </div>
                     </a>
                 </div>
@@ -272,7 +279,7 @@ Phasellus id lorem convallis, tempor tellus consectetur, sodales libero. Interdu
                 <div class="c-grid__item  anim anim--right">
                     <a href="project.html" class="c-grid__item--more">
                         <div class="c-grid__underlink c-grid__underlink--right">
-                            <span>Previous project</span> <i class="icon-arrow"></i>
+                            <span>Next project</span> <i class="icon-arrow"></i>
                         </div>
                     </a> 
                 </div>

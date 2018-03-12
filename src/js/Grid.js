@@ -7,11 +7,17 @@ export function grid() {
     let macyInstance = [],
         mobile = false,
         ww = window.innerWidth;
+        
+    if (ww <= 768) {
+        mobile = true;
+    }
 
     const init = function() {
         for (let i = 0; i < grid.length; i ++) {
 
-            grid[i].className += ' js-macy'+i;
+            if (!grid[i].classList.contains('js-macy'+i)) {
+                grid[i].className += ' js-macy'+i;
+            }
     
             macyInstance[i] = Macy({
                 container: '.js-macy'+i,
@@ -32,13 +38,13 @@ export function grid() {
                 }
             });
             
-            console.log('s');
-
             document.addEventListener('lazybeforeunveil', function() {
                 macyInstance[i].recalculate(true);
             });
 
+            console.log('f');
             
+            macyInstance[i].reInit();
         }        
     }
     
@@ -48,20 +54,29 @@ export function grid() {
         ww = window.innerWidth;
         
         if ((ww <= 768) && (mobile === false)) {
-            for (let i = 0; i < grid.length; i ++) {
-                if (macyInstance[i] != undefined) {
-                    macyInstance[i].remove();
-                }
-            }
+        
 
-            mobile = true;
+                for (let i = 0; i < grid.length; i ++) {
+                    if (macyInstance[i] != undefined) {
+                        macyInstance[i].remove();
+                    }
+                }
+                
+                mobile = true;
+            
+                console.log('destroy');
+
+
+            
         }
         
         if ((ww > 768) && (mobile === true)) {
-                        console.log('init');
-            init();
-            
-            mobile = false;
+        
+
+                console.log('init');
+                init();
+                mobile = false;
+
         }
     }
     
