@@ -5,7 +5,7 @@
     display: block;
     width: 60px;
     height: 60px;
-    transform: rotate(0deg) scale(.5) translateY(-50%);
+    transform: rotate(0deg) scale(.45) translateY(-50%);
     transition: .5s ease-in-out;
     cursor: pointer;
   
@@ -31,7 +31,6 @@
       height: 9px;
       width: 100%;
       background: $c-black;
-      border-radius: 9px;
       opacity: 1;
       left: 0;
       transform: rotate(0deg);
