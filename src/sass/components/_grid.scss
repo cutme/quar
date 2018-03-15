@@ -19,10 +19,19 @@
     &--pagination {
         .c-grid__item {
             padding-bottom: 0;
+            
+            &:not(.only-right) {
+                &:first-child {
+                    @media screen and ( min-width: $tablet_portrait + 1px ) {
+                        padding-top: 230px;
+                    }
+                }
+            }
 
-            &:first-child {
-                @media screen and ( min-width: $tablet_portrait + 1px ) {
-                    padding-top: 230px;
+            &.only-right {
+                @media screen and ( min-width: $smartphone_portrait + 1px ) {
+                    float: right;
+                    width: 50%;
                 }
             }
             
@@ -37,13 +46,17 @@
                 }
                 
             }
-            
         }
         
         @media screen and ( max-width: $tablet_portrait + px ) {
             display: flex;
             justify-content: space-between;
+            
+            &.one-item {
+                justify-content: center;
+            }
         }
+        
         
     }
     
@@ -104,15 +117,17 @@
             }
         }
         
+/*
         &--more {
             &:hover {
                 color: $c-red;
             }
         }
+*/
     }
     
     &__caption {
-        text-align: right;
+        text-align: right;        
         
         &--lead {
             line-height: 1.25;
@@ -134,6 +149,14 @@
             }
         }
         
+        &--services {
+            font-size: rem(32);
+            
+            @media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1460px ) {
+                font-size: get-vw-desktop(32);
+            }
+        }
+        
         &--more {
             font: {
                 size: rem(26);
@@ -147,12 +170,14 @@
             @media screen and ( max-width: $tablet_portrait + px ) {
                 font-size: rem(20);
             }
+/*
             
             a {
                 &:hover {
                     color: $c-red;
                 }
             }
+*/
         }
     }
 

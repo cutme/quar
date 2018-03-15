@@ -3,15 +3,15 @@
     @extend %abs-y;
     left: 40px;
     display: block;
-    width: 50px; height: 50px;
+    width: 40px; height: 40px;
     
     @media screen and ( max-width: $desktop + px ) {
         left: 60px;
     }
     
     @media screen and ( max-width: $tablet + px ) {
-        width: 40px;
-        top: 12px;
+        width: 30px;
+        top: 10px;
         transform: none;
     }
     
