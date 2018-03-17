@@ -17,6 +17,15 @@ const cssProd = ExtractTextPlugin.extract({
 
 //const cssConfig = isProd ? cssProd : cssDev;
 
+const minify = {
+    collapseWhitespace: true,
+    collapseInlineTagWhitespace: true,
+    removeComments: true,
+    minifyJS: true,
+    minifyURLs: true,
+    removeEmptyAttributes: true,
+    removeScriptTypeAttributes: true,
+}
 
 module.exports = {
     entry: {
@@ -113,6 +122,7 @@ module.exports = {
     		title: 'Quar',
     		chunks: ['contacts'],
             template: './src/contacts.html',
+            minify: minify,
             favicon: './src/favicon.ico'
 		}),
 
@@ -122,10 +132,7 @@ module.exports = {
     		title: 'Quar',
     		chunks: ['index'],
             template: './src/index.html',
-            minify: {
-             collapseWhitespace: true,
-             preserveLineBreaks: true
-            },
+            minify: minify,
             favicon: './src/favicon.ico'
 		}),
 		
@@ -135,6 +142,7 @@ module.exports = {
     		title: 'Quar',
     		chunks: ['project'],
             template: './src/project.html',
+            minify: minify,
             favicon: './src/favicon.ico'
 		}),
 		
@@ -144,6 +152,7 @@ module.exports = {
     		title: 'Quar',
     		chunks: ['service'],
             template: './src/service.html',
+            minify: minify,
             favicon: './src/favicon.ico'
 		}),
 		
@@ -153,6 +162,7 @@ module.exports = {
     		title: 'Quar',
     		chunks: ['services'],
             template: './src/services.html',
+            minify: minify,
             favicon: './src/favicon.ico'
 		}),
 		
@@ -162,6 +172,7 @@ module.exports = {
     		title: 'Quar',
     		chunks: ['work'],
             template: './src/work.html',
+            minify: minify,
             favicon: './src/favicon.ico'
 		}),
 

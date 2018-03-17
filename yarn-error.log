@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js dev
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js version
 
 PATH: 
   /opt/local/bin:/opt/local/sbin:/Users/admin/.rvm/gems/ruby-2.2.0/bin:/Users/admin/.rvm/gems/ruby-2.2.0@global/bin:/Users/admin/.rvm/rubies/ruby-2.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/admin/.rvm/bin
@@ -16,12 +16,11 @@ Platform:
 npm manifest: 
   {
       "devDependencies": {
+          "atvimg": "^0.0.4",
           "autosize": "^4.0.0",
           "babel-core": "^6.26.0",
           "babel-loader": "^7.1.2",
           "babel-preset-env": "^1.6.1",
-          "barba.js": "^1.0.0",
-          "bricky": "^1.0.1",
           "browserslist": "^3.1.1",
           "css-loader": "0.14.5",
           "extract-text-webpack-plugin": "^3.0.2",
@@ -47,7 +46,6 @@ npm manifest:
           "sass-loader": "^6.0.6",
           "script-ext-html-webpack-plugin": "^1.8.8",
           "style-loader": "^0.20.1",
-          "swiper": "^4.1.0",
           "url-loader": "^0.6.2",
           "validate-js": "^2.0.1",
           "webpack": "^3.11.0",
@@ -70,7 +68,7 @@ npm manifest:
           "blazy": "^1.8.2",
           "form-serialize": "^0.7.2",
           "gsap": "^1.20.3",
-          "siema": "^1.5.0",
+          "siema": "^1.5.1",
           "validate.js": "^0.12.0"
       },
       "browserslist": [
@@ -423,6 +421,10 @@ Lockfile:
   atob@~1.1.0:
     version "1.1.3"
     resolved "https://registry.yarnpkg.com/atob/-/atob-1.1.3.tgz#95f13629b12c3a51a5d215abdce2aa9f32f80773"
+  
+  atvimg@^0.0.4:
+    version "0.0.4"
+    resolved "https://registry.yarnpkg.com/atvimg/-/atvimg-0.0.4.tgz#87272ab10b2ef917311c5b6e01daa2fbd039ef6c"
   
   autosize@^4.0.0:
     version "4.0.0"
@@ -919,10 +921,6 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   
-  barba.js@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/barba.js/-/barba.js-1.0.0.tgz#3c1d7358f0d3f87719cb1bdb775be417c9273f7d"
-  
   base64-js@^1.0.2:
     version "1.2.3"
     resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.3.tgz#fb13668233d9614cf5fb4bce95a9ba4096cdf801"
@@ -1125,10 +1123,6 @@ Lockfile:
       snapdragon-node "^2.0.1"
       split-string "^3.0.2"
       to-regex "^3.0.1"
-  
-  bricky@^1.0.1:
-    version "1.0.1"
-    resolved "https://registry.yarnpkg.com/bricky/-/bricky-1.0.1.tgz#e6dd18dcd13d79561b592f742271322667f1e5ac"
   
   brorand@^1.0.1:
     version "1.1.0"
@@ -2181,12 +2175,6 @@ Lockfile:
     dependencies:
       domelementtype "~1.1.1"
       entities "~1.1.1"
-  
-  dom7@^2.0.2:
-    version "2.0.3"
-    resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.0.3.tgz#610c530d32ebd9690d3959b19a0f379584f24fc4"
-    dependencies:
-      ssr-window "^1.0.0"
   
   domain-browser@^1.1.1:
     version "1.2.0"
@@ -6472,7 +6460,7 @@ Lockfile:
       interpret "^1.0.0"
       rechoir "^0.6.2"
   
-  siema@^1.5.0:
+  siema@^1.5.1:
     version "1.5.1"
     resolved "https://registry.yarnpkg.com/siema/-/siema-1.5.1.tgz#eff312b77e8340fa4d81d5d053ebbeb9113ff888"
   
@@ -6683,10 +6671,6 @@ Lockfile:
       jsbn "~0.1.0"
       tweetnacl "~0.14.0"
   
-  ssr-window@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.0.tgz#8ed1b6beaa0a371ba7e74d6515d584c3f1cf973c"
-  
   stat-mode@^0.2.0:
     version "0.2.2"
     resolved "https://registry.yarnpkg.com/stat-mode/-/stat-mode-0.2.2.tgz#e6c80b623123d7d80cf132ce538f346289072502"
@@ -6881,13 +6865,6 @@ Lockfile:
       mkdirp "~0.5.1"
       sax "~1.2.1"
       whet.extend "~0.9.9"
-  
-  swiper@^4.1.0:
-    version "4.1.6"
-    resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.1.6.tgz#8e426a741f211a38a3713c8fa0d5c0152c8a6a87"
-    dependencies:
-      dom7 "^2.0.2"
-      ssr-window "^1.0.0"
   
   symbol-observable@1.0.1:
     version "1.0.1"
@@ -7725,17 +7702,14 @@ Lockfile:
       fd-slicer "~1.0.1"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c webpack-dev-server --host 0.0.0.0 --config webpack.dev.js
-  Directory: /Volumes/Data/Projekty/www.quar.pl
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:30281:17)
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.5.1/libexec/lib/cli.js:128791:13)
+      at emitNone (events.js:105:13)
+      at Interface.emit (events.js:207:7)
+      at Interface._ttyWrite (readline.js:768:16)
+      at ReadStream.onkeypress (readline.js:157:10)
       at emitTwo (events.js:125:13)
-      at ChildProcess.emit (events.js:213:7)
-      at maybeClose (internal/child_process.js:887:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:208:5)
+      at ReadStream.emit (events.js:213:7)
+      at emitKeys (internal/readline.js:417:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1005:36)
