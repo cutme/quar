@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
     
     <title><%= htmlWebpackPlugin.options.title %></title>
-	
-	<meta name="GOOGLEBOT" content="NOODP"> 
-	<meta name="keywords" content="">
-	<meta name="description" content="">
 
     <%= require('html-loader!./includes/head.html') %>
 </head>
 
-<body itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<body style="overflow: hidden">
 
 <div style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 120; background-color: #f4f4f4; background-image: url(<%= require('./img/quarstudio.svg') %>); background-repeat: no-repeat; background-position: center; background-size: 138px" id="cover"></div>
 
@@ -23,7 +19,7 @@
             <img src=<%= require("./img/quar.svg") %> width="50" height="50" alt="Quar">
         </a>
         
-        <nav class="c-nav">
+        <nav class="c-nav" id="nav">
             <ul class="c-menu">
                 <li>
                     <a href="index.html" data-rain-effect="home">
@@ -65,7 +61,14 @@
             </ul>
         </nav>
         
-        <div class="c-top__bg js-bgFadeIn js-white"></div>
+        <div class="c-hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="c-top__bg js-bgFadeIn"></div>
     </div>
 
 
