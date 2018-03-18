@@ -19,7 +19,7 @@ const cssProd = ExtractTextPlugin.extract({
 
 const minify = {
     collapseWhitespace: true,
-    collapseInlineTagWhitespace: true,
+   // collapseInlineTagWhitespace: true,
     removeComments: true,
     minifyJS: true,
     minifyURLs: true,
